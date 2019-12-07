@@ -1,3 +1,4 @@
 .realtors {
-    background-color: $color-secondary;
+    background-color: blue;
+    grid-column: col-start 7 / fill-end;
 }
