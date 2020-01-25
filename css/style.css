@@ -18,7 +18,8 @@ body {
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  width: 100%; }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
@@ -106,11 +107,11 @@ body {
   background-image: linear-gradient(rgba(16, 29, 44, 0.6), rgba(16, 29, 44, 0.9)), url(../img/hero.jpeg);
   background-size: cover;
   background-position: center;
-  padding: 8rem;
+  padding: 6rem;
   padding-top: 4rem;
   display: grid;
-  grid-template-rows: 1fr min-content 6rem 1fr;
-  grid-template-columns: max-content;
+  grid-template-rows: 1fr min-content 5rem 1fr;
+  grid-template-columns: minmax(min-content, max-content);
   grid-row-gap: 1.5rem;
   justify-content: center; }
   .header__logo {
@@ -128,21 +129,38 @@ body {
     .header__seenon-text::before, .header__seenon-text::after {
       background-color: currentColor;
       content: "";
-      display: block;
       height: 1px;
       color: #fff; }
   .header__seenon-logos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 3rem;
+    gap: 3rem;
     justify-items: center; }
     .header__seenon-logos img {
       height: 2.5rem;
       filter: brightness(70%); }
 
 .realtors {
-  background-color: blue;
-  grid-column: col-start 7 / fill-end; }
+  background-color: #101d2c;
+  grid-column: col-start 7 / fill-end;
+  padding: 3rem;
+  display: grid;
+  place-content: center;
+  row-gap: 2rem;
+  justify-items: center; }
+  .realtors__list {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    column-gap: 3rem;
+    row-gap: 5vh;
+    align-items: center; }
+  .realtors__img {
+    height: 5rem;
+    border-radius: 50%; }
+  .realtors__sold {
+    text-transform: uppercase;
+    color: #aaa;
+    margin-top: -3px; }
 
 .features {
   grid-column: center-start / center-end;

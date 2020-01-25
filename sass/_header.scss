@@ -4,15 +4,16 @@
     background-image: linear-gradient(rgba($color-secondary, 0.6),rgba($color-secondary, 0.9)), url(../img/hero.jpeg);
     background-size: cover;
     background-position: center;
-    padding: 8rem;
+    padding: 6rem;
     padding-top: 4rem;
-
-    display: grid;
-    grid-template-rows: 1fr min-content 6rem 1fr;
-    grid-template-columns: max-content;
-    grid-row-gap: 1.5rem;
-    justify-content: center;
     
+    display: grid;
+    grid-template-rows: 1fr min-content 5rem 1fr;
+    grid-template-columns: minmax(min-content, max-content);
+    grid-row-gap: 1.5rem;
+
+    justify-content: center;
+        
     &__logo {
         height: 3rem;
         justify-self: center;
@@ -35,7 +36,7 @@
         &::after {
             background-color: currentColor;
             content: "";
-            display: block;
+            // display: block;
             height: 1px;
             color: #fff;
             
@@ -46,7 +47,7 @@
     &__seenon-logos {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-column-gap: 3rem;
+        gap: 3rem;
         justify-items: center;
 
 
