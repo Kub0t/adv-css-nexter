@@ -3,16 +3,32 @@
     grid-column: col-start 7 / fill-end;
     padding: 3rem;
     display: grid;
-    place-content: center;
+    justify-content: center;
+    align-content: center;
     row-gap: 2rem;
     justify-items: center;
-    
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+    }
+
     &__list {
         display: grid;
-        grid-template-columns: max-content max-content;
+        grid-template-columns: min-content max-content;
         column-gap: 3rem;
         row-gap: 5vh;
-        align-items: center;
+        align-items: center;        
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-rows: repeat(2, max-content);
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 10vw;
+            row-gap: 2vh;
+            text-align: center;
+            grid-auto-flow: column;
+            justify-items: center;
+        }
         
     }
 
