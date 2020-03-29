@@ -29,6 +29,26 @@
             grid-auto-flow: column;
             justify-items: center;
         }
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-rows: repeat(2, max-content);
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 8vw;
+            row-gap: 2vh;
+            text-align: center;
+            grid-auto-flow: column;
+            justify-items: center;
+        }
+        
+        @media only screen and (max-width: $bp-smallest) {
+            grid-template-rows: repeat(3, min-content);
+            grid-template-columns: min-content max-content;
+            grid-auto-flow: row;
+            column-gap: 2rem;
+            row-gap: 3vh;
+            
+        }
+        
         
     }
 

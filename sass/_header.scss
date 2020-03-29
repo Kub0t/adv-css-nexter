@@ -18,6 +18,12 @@
         grid-column: 1 / -1;
         grid-row: 2 / 3;
     }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+        padding: 4rem;
+    }
         
     &__logo {
         height: 3rem;
